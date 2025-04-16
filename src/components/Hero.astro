@@ -25,12 +25,13 @@ import SocialPill from "./SocialPill.astro";
         
     </div>
 
-      <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white">
-        Soy Jordan Rheza
-    </h1>
+      <h1 class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white writing-animation">
+        Hello, soy Jordan Rheza
+      </h1>
+      
         <p class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
-            Desarrollador Fullstack. <strong>Me encanta aprender y crear cosas nuevas.</strong>
-            de Guayaquil, Ecuador. Actualmente estoy buscando nuevas oportunidades laborales.
+            Desarrollador FullStack. <strong>Me encanta aprender y crear cosas nuevas.</strong>
+            Soy de Guayaquil, Ecuador. Actualmente estoy buscando nuevas oportunidades laborales.
         </p>
         
 
@@ -53,3 +54,45 @@ import SocialPill from "./SocialPill.astro";
         </SocialPill>
       </nav>
 </div>
+
+<style>
+  @media (min-width: 1024px) {
+    .writing-animation {
+    overflow: hidden;
+    width: 100%;
+    border-right: 3px solid;
+    white-space: nowrap;
+    animation: typing 2.5s steps(19), cursor .4s step-end infinite alternate;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent; }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Nueva animación para hacer desaparecer el borde */
+@keyframes remove-border {
+    to {
+        border-right: transparent;
+    }
+}
+
+/* Aplica la animación después de que termine la de "typing" */
+.writing-animation {
+    animation: typing 3.5s steps(19), cursor .4s step-end infinite alternate, remove-border 0s 2.5s forwards;
+}
+  }
+
+
+
+
+
+</style>

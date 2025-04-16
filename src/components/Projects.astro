@@ -5,7 +5,7 @@ import Bootstrap from "./icons/Bootstrap.astro";
 import Netlify from "./icons/Netlify.astro";
 import LinkButton from "./LinkButton.astro";
 import Link from "./icons/Link.astro";
-
+import SpringBoot from "./icons/SpringBoot.astro";
 const TAGS = {
   JavaScript: {
     name: "JavaScript",
@@ -24,6 +24,11 @@ const TAGS = {
     class: "bg-black text-white",
     icon: Netlify,
   },
+  SpringBoot: {
+    name: "SpringBoot",
+    class: "bg-black text-white",
+    icon: SpringBoot,
+  },
 }
 
 const PROJECTS = [
@@ -32,16 +37,15 @@ const PROJECTS = [
     description: "Aplicación web interactiva para explorar trailers de películas y series. Desarrollada con Bootstrap, funciones serverless de Netlify e integracion de la Api The Movie db, permite a los usuarios ver detalle, fecha de estreno y calificación de la película o seríe.",
     link: "https://filmoweb.netlify.app/",
     github: "https://github.com/JordanRheza/movies_web",
-    image: "/project/project.jpg",
+    image: "/project/project1.webp",
     tags: [TAGS.JavaScript, TAGS.Bootstrap, TAGS.Netlify],
   },
   {
-    title: "FilmoWeb",
-    description: "Aplicación web para ver trailer de películas y series.",
-    link: "https://filmoweb.netlify.app/",
-    github: "https://github.com/JordanRheza/movies_web",
-    image: "/project/project.jpg",
-    tags: [TAGS.JavaScript, TAGS.Bootstrap, TAGS.Netlify],
+    title: "Sistema de alquiler de vehículos",
+    description: "Sistema Backend de alquiler de vehículos. Desarrollado con Spring Boot, permite gestionar usuarios, vehículos y reservas.",
+    github: "https://github.com/JordanRheza/alquilerVehiculos",
+    image: "./project/project2.webp",
+    tags: [TAGS.SpringBoot],
   },
 ];
 ---
@@ -55,7 +59,6 @@ const PROJECTS = [
             <img
               alt="Captura del proyecto"
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
               src={image}
             />
           </div>
