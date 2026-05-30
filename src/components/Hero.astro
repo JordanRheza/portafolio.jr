@@ -4,8 +4,8 @@ import LinkedIn from "./icons/LinkedIn.astro";
 import Mail from "./icons/Mail.astro";
 import Badge from "./Badge.astro";
 import SocialPill from "./SocialPill.astro";
-
-
+import TegakiRenderer from 'tegaki/astro';
+import bundle from 'tegaki/fonts/caveat';
 ---
 
 <div class="max-w-xl">
@@ -28,9 +28,12 @@ import SocialPill from "./SocialPill.astro";
         
     </div>
 
-      <h1 class="text-4xl font-bold tracking-tight text-gray-100 sm:text-5xl dark:text-white writing-animation">
-        Hello, soy Jordan Rheza
-      </h1>
+      <TegakiRenderer
+        font={bundle}
+        text="Hello, soy Jordan Rheza"
+        time={{ mode: 'uncontrolled', speed: 1.5, loop: true }}
+        style="font-size: 48px"
+      />
       
         <p class="mt-6 text-xl text-gray-100 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300">
             Desarrollador FullStack. <strong>Me encanta aprender y crear cosas nuevas.</strong>
@@ -58,7 +61,7 @@ import SocialPill from "./SocialPill.astro";
       </nav>
 </div>
 
-<style>
+<!-- <style>
   @media (min-width: 1024px) {
     .writing-animation {
     overflow: hidden;
@@ -98,4 +101,4 @@ import SocialPill from "./SocialPill.astro";
 
 
 
-</style>
+</style> -->
